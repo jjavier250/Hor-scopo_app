@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Horoscopo_app</string>
+    <string name="Horoscopo_name_Aries">Aries</string>
+    <string name="Horoscopo_name_Tauro">Tauro</string>
+    <string name="Horoscopo_name_Geminis">Geminis</string>
+    <string name="Horoscopo_name_Cancer">Cancer</string>
+    <string name="Horoscopo_name_Leo">Leo</string>
+    <string name="Horoscopo_name_Virgo">Virgo</string>
+    <string name="Horoscopo_name_Libra">Libra</string>
+    <string name="Horoscopo_name_Escorpio">Escorpio</string>
+    <string name="Horoscopo_name_Sagitario">Sagitario</string>
+    <string name="Horoscopo_name_Capricornio">Capricornio</string>
+    <string name="Horoscopo_name_Piscis">Piscis</string>
+    <string name="Horoscopo_name_Acuario">Acuario</string>
+</resources>
