@@ -3,20 +3,24 @@ package com.example.horoscopo_app.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.horoscopo_app.R
+import com.example.horoscopo_app.data.Horoscopo
 
 //  *********************************************** ADAPTER  ********************************************************
-class CustomAdapter(private val dataSet: Array<String>) :
-    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class HoroscopoAdapter(private val dataSet: List<Horoscopo> =listOf(), val onClickListener:(Int)->Unit) :
+    RecyclerView.Adapter<HoroscopoAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView
+        val imageView: ImageView
 
         init {
             // Define click listener for the ViewHolder's View
             textView = view.findViewById(R.id.txthorocopo)  // hace referencia el textview que esta en item_horoscopo
+            imageView = view.findViewById(R.id.imagehoroscopo)  // hace referencia el textview que esta en item_horoscopo
         }
     }
 
@@ -30,9 +34,15 @@ class CustomAdapter(private val dataSet: Array<String>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
-        viewHolder.textView.text = dataSet[position]
+        viewHolder.itemView.setOnClickListener{onClickListener(position)}
+
+        val horoscopo:Horoscopo = dataSet[position]
+
+        val nombre = viewHolder.textView.context.getString(horoscopo.name)
+        val drawable = viewHolder.textView.context.getDrawable(horoscopo.image)
+
+        viewHolder.textView.text = nombre
+        viewHolder.imageView.setImageDrawable(drawable)
     }
 
 
