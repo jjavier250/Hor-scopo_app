@@ -12,11 +12,13 @@ class detalleHoroscopo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalle_horoscopo)
 
-
-        var nombre=intent.getStringExtra("NOMBRE_HOROSCOPO")
-
+        //declaramos el textview
         horoscopotextview=findViewById(R.id.horoscopotextview)
 
+        //recuperamos de la pantalla anterios
+        var nombre=intent.getStringExtra("NOMBRE_HOROSCOPO")
+
+        //escribimos en el textview
         horoscopotextview.text=nombre
 
 
