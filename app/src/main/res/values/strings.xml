@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">Horoscopo_app</string>
+    <string name="app_name_app">HOROSCOPOS</string>
     <string name="Horoscopo_name_Aries">Aries</string>
     <string name="Horoscopo_name_Tauro">Taurus</string>
     <string name="Horoscopo_name_Geminis">Gemini</string>

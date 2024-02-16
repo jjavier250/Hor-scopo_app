@@ -12,6 +12,7 @@ class detalleHoroscopo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalle_horoscopo)
 
+
         var nombre=intent.getStringExtra("NOMBRE_HOROSCOPO")
 
         horoscopotextview=findViewById(R.id.horoscopotextview)

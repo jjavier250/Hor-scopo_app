@@ -11,9 +11,9 @@ import com.example.horoscopo_app.data.Horoscopo
 
 //  *********************************************** ADAPTER  ********************************************************
 class HoroscopoAdapter(private val dataSet: List<Horoscopo> =listOf(), val onClickListener:(Int)->Unit) :
-    RecyclerView.Adapter<HoroscopoAdapter.ViewHolder>() {
+    RecyclerView.Adapter<HoroscopoAdapter.MiViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class MiViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView
         val imageView: ImageView
 
@@ -24,25 +24,27 @@ class HoroscopoAdapter(private val dataSet: List<Horoscopo> =listOf(), val onCli
         }
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MiViewHolder {
 
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.item_horoscopo, viewGroup, false) // item_horoscopo hace referencia al xml de item_horoscopo.xml
 
-        return ViewHolder(view)
+        return MiViewHolder(view)
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: MiViewHolder, position: Int) {
 
-        viewHolder.itemView.setOnClickListener{onClickListener(position)}
+        viewHolder.itemView.setOnClickListener{onClickListener(position)} // capturamos el click del control
 
         val horoscopo:Horoscopo = dataSet[position]
 
         val nombre = viewHolder.textView.context.getString(horoscopo.name)
         val drawable = viewHolder.textView.context.getDrawable(horoscopo.image)
 
+        // a mi variable viewHolder le asigno al xml de la imagen y del text los valores
         viewHolder.textView.text = nombre
         viewHolder.imageView.setImageDrawable(drawable)
+
     }
 
 

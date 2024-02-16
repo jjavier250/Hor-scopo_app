@@ -1,5 +1,6 @@
 package com.example.horoscopo_app.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -22,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         Horoscopo(R.drawable.libra,R.string.Horoscopo_name_Libra),
         Horoscopo(R.drawable.piscis,R.string.Horoscopo_name_Piscis),
         Horoscopo(R.drawable.acuario,R.string.Horoscopo_name_Acuario),
-        Horoscopo(R.drawable.geminis,R.string.Horoscopo_name_Geminis)
+        Horoscopo(R.drawable.geminis,R.string.Horoscopo_name_Geminis),
+        Horoscopo(R.drawable.capricornio,R.string.Horoscopo_name_Capricornio),
+        Horoscopo(R.drawable.virgo,R.string.Horoscopo_name_Virgo)
 
     )
 
@@ -39,9 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     fun inicializar(){
 
-        val adapter :HoroscopoAdapter = HoroscopoAdapter(listaDeHoroscopos,{
-            onItemClickListener(it)
-        })
+        val adapter :HoroscopoAdapter = HoroscopoAdapter(listaDeHoroscopos,{ llamarPantalla(it) })
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
@@ -49,14 +50,22 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-private fun onItemClickListener(position:Int){
+private fun llamarPantalla(position:Int){
 
-
+        //pop up con el horoscopo selecionado
     Toast.makeText(this,getString(listaDeHoroscopos[position].name),Toast.LENGTH_LONG).show()
+
+   val intent = Intent(this, detalleHoroscopo::class.java)
+    intent.putExtra("NOMBRE_HOROSCOPO",getString(listaDeHoroscopos[position].name))
+
+    startActivity(intent)
+
 }
 
 
 }
+
+
 
 
 

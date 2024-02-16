@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Horoscopo_app</string>
+    <string name="app_name_app">HOROSCOPOS</string>
     <string name="Horoscopo_name_Aries">Aries</string>
     <string name="Horoscopo_name_Tauro">Tauro</string>
     <string name="Horoscopo_name_Geminis">Geminis</string>
