@@ -15,4 +15,22 @@
     <string name="Horoscopo_name_Acuario">Aquarius</string>
     <string name="Horoscopo_name_Piscis">Pisces</string>
 
+
+    <string name="Horoscopo_fechas_Aries">Aries: 21 de marzo al 19 de abril</string>
+    <string name="Horoscopo_fechas_Tauro">Tauro: 20 de abril al 20 de mayo</string>
+    <string name="Horoscopo_fechas_Geminis">Géminis: 21 de mayo al 20 de junio</string>
+    <string name="Horoscopo_fechas_Cancer">Cáncer: 21 de junio al 22 de julio </string>
+    <string name="Horoscopo_fechas_Leo">Leo: 23 de julio al 22 de agosto </string>
+    <string name="Horoscopo_fechas_Libra">Libra: del 23 de septiembre al 22 de octubre </string>
+    <string name="Horoscopo_fechas_Virgo">Virgo:23 de agosto al 22 de septiembre </string>
+    <string name="Horoscopo_fechas_Escorpio">Escorpio: 23 de octubre al 21 de noviembre</string>
+    <string name="Horoscopo_fechas_Sagitario">Sagitario: 22 de noviembre al 21 de diciembre</string>
+    <string name="Horoscopo_fechas_Acuario">Acuario: del 20 de enero al 18 de febrero</string>
+    <string name="Horoscopo_fechas_Capricornio">Capricornio: del 22 de diciembre al 19 de enero</string>
+    <string name="Horoscopo_fechas_Piscis">Piscis: del 19 de febrero al 20 de marzo</string>
+
+
+
+
+
 </resources>

@@ -12,17 +12,18 @@
 
     <ImageView
         android:id="@+id/imagehoroscopo"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
         app:srcCompat="@drawable/leo"
 
         />
 
     <TextView
         android:id="@+id/txthorocopo"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
         android:text="Horoscopo"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
         />

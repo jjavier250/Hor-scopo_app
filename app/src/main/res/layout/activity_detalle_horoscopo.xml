@@ -4,12 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.detalleHoroscopo">
+    tools:context=".activities.detalleHoroscopo"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/horoscopotextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="xxx"
+        android:text="horospoco seleccionado"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:id="@+id/imagehoroscopo2"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/piscis"
         />
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoy en tu día:"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/horoscopoAPITextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="descripcion del horoscopo"
+        android:textSize="24sp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
