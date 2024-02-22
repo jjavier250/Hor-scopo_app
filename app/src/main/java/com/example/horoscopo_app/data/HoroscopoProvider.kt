@@ -14,30 +14,7 @@ class HoroscopoProvider {
 
     suspend fun descripcionHoroscopo(horoscopeId: String): String? {
 
-        val url = URL("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=$horoscopeId&day=TODAY") // URL de la API o endpoint
-
-
-/*
-        val client = OkHttpClient()
-
-        // Construir solicitud con el encabezado de idioma
-        val request = Request.Builder()
-            .url("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=$sign")
-            .header("Accept-Language", "es") // Establecer el idioma en español
-            .build()
-
-        // Realizar la solicitud de forma síncrona
-        client.newCall(request).execute().use { response ->
-            if (!response.isSuccessful) throw Exception("Unexpected code $response")
-
-            // Obtener el cuerpo de la respuesta como texto
-            val responseBody = response.body?.string()
-
-            // Imprimir el resultado
-            println(responseBody)
-        }
-
-       */
+        val url = URL("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=$horoscopeId&day=TODAY&lang=es") // URL de la API o endpoint
 
         var connection: HttpsURLConnection? = null
         var result: String? = null

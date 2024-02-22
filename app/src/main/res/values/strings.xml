@@ -28,9 +28,7 @@
     <string name="Horoscopo_fechas_Acuario">Acuario: del 20 de enero al 18 de febrero</string>
     <string name="Horoscopo_fechas_Capricornio">Capricornio: del 22 de diciembre al 19 de enero</string>
     <string name="Horoscopo_fechas_Piscis">Piscis: del 19 de febrero al 20 de marzo</string>
-
-
-
+    <string name="menu_search">buscar</string>
 
 
 </resources>

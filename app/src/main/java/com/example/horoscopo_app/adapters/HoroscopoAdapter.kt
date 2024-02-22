@@ -10,7 +10,7 @@ import com.example.horoscopo_app.R
 import com.example.horoscopo_app.data.Horoscopo
 
 //  *********************************************** ADAPTER  ********************************************************
-class HoroscopoAdapter(private val dataSet: List<Horoscopo> =listOf(), val onClickListener:(Int)->Unit) :
+class HoroscopoAdapter(private var dataSet: List<Horoscopo> =listOf(), val onClickListener:(Int)->Unit) :
     RecyclerView.Adapter<HoroscopoAdapter.MiViewHolder>() {
 
     class MiViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -49,5 +49,10 @@ class HoroscopoAdapter(private val dataSet: List<Horoscopo> =listOf(), val onCli
 
 
     override fun getItemCount() = dataSet.size
+
+    fun updateData(list:List<Horoscopo>){
+        dataSet=list
+        notifyDataSetChanged()
+    }
 
 }

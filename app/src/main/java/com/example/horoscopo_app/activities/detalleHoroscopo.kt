@@ -58,7 +58,7 @@ class detalleHoroscopo : AppCompatActivity() {
         supportActionBar?.setTitle(nombre )
         supportActionBar?.setSubtitle(fehaHoroscopo)
 
-        //flechita para ir para atras
+        //flechita para ir para atras va asociada con : +++++   para retroceder
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //supportActionBar?.apply {
         //    setDisplayHomeAsUpEnabled(true)
